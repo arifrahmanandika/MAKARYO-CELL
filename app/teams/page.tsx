@@ -42,13 +42,13 @@ export default async function Teams() {
           {people?.map((person) => {
             const { fields }: { fields: { file: { url: string } } } =
               person.fields.profilpic;
-            // const profilePicUrl = person?.fields?.profilpic?.fields?.file?.url;
             return (
               <li key={person.sys.id}>
                 <Image
                   className="mx-auto h-56 w-56 rounded-full"
                   src={`https:${fields.file.url}`}
-                  // src={`https:${profilePicUrl}`}
+                  width={150}
+                  height={150}
                   alt=""
                 />
                 <h3

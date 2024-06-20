@@ -54,13 +54,20 @@ export default function NavBar() {
                         key={link.href}
                         href={link.href}
                         onClick={() => handleLinkClick(link.href)}
-                        className={`rounded-md px-3 py-2 text-sm font-medium ${
+                        className={`relative rounded-md px-3 py-2 text-sm font-medium transition ease-in-out duration-300 transform ${
                           activeLink === link.href
                             ? "bg-gray-700 text-white"
-                            : "text-gray-700 hover:bg-gray-700 hover:text-white"
+                            : "text-gray-700 hover:bg-gray-700 hover:text-white hover:scale-105"
                         }`}
                       >
                         {link.label}
+                        <span
+                          className={`absolute bottom-0 left-0 w-full h-0.5 bg-red-500 transform scale-x-0 transition-transform duration-300 ease-in-out ${
+                            activeLink === link.href
+                              ? "scale-x-100"
+                              : "hover:scale-x-100"
+                          }`}
+                        ></span>
                       </Link>
                     ))}
                   </div>
