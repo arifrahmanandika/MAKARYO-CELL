@@ -11,7 +11,7 @@ interface TypeTeamFields {
   };
 }
 
-async function fetchArticle() {
+const fetchArticle = async () => {
   try {
     const data = await client.getEntries<TypeTeamFields>();
     // console.log(data.items[0].fields.profilpic); // untuk lihat hasil json dari datanya
@@ -19,7 +19,7 @@ async function fetchArticle() {
   } catch (err) {
     console.log(err);
   }
-}
+};
 
 export default async function Teams() {
   const people = await fetchArticle();
@@ -45,7 +45,7 @@ export default async function Teams() {
             // const profilePicUrl = person?.fields?.profilpic?.fields?.file?.url;
             return (
               <li key={person.sys.id}>
-                <img
+                <Image
                   className="mx-auto h-56 w-56 rounded-full"
                   src={`https:${fields.file.url}`}
                   // src={`https:${profilePicUrl}`}
