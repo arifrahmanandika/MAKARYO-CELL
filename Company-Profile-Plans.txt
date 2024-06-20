@@ -1,0 +1,13 @@
+
+#buat company profile MAKARYO Group
+-Products or services: Handphone, Accesories, Sparepart, Service HP, Pulsa Multi All Operator
+
+
+https://docs.google.com/document/d/1zLQYB1OyQgE-gVl53G314Q2hs7vduUOKpDfmhcsqeDk/edit
+
+
+-Home: Hero Section, Company overview, (di HOme Page ada Nav ke masing2 Category Page)
+-About: Company History, Teams, Owner, Sales, Teknisi, dll
+-Product: 
+-Teams: https://randomuser.me
+-Testimoni: CMS
