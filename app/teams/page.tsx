@@ -40,15 +40,15 @@ export default async function Teams() {
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
         >
           {people?.map((person) => {
-            // const { fields }: { fields: { file: { url: string } } } =
-            //   person.fields.profilpic;
-            const profilePicUrl = person?.fields?.profilpic?.fields?.file?.url;
+            const { fields }: { fields: { file: { url: string } } } =
+              person.fields.profilpic;
+            // const profilePicUrl = person?.fields?.profilpic?.fields?.file?.url;
             return (
               <li key={person.sys.id}>
                 <img
                   className="mx-auto h-56 w-56 rounded-full"
-                  // src={`https:${fields.file.url}`}
-                  src={`https:${profilePicUrl}`}
+                  src={`https:${fields.file.url}`}
+                  // src={`https:${profilePicUrl}`}
                   alt=""
                 />
                 <h3
