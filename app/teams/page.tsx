@@ -11,7 +11,7 @@ interface TypeTeamFields {
   };
 }
 
-export async function fetchArticle() {
+async function fetchArticle() {
   try {
     const data = await client.getEntries<TypeTeamFields>();
     // console.log(data.items[0].fields.profilpic); // untuk lihat hasil json dari datanya
